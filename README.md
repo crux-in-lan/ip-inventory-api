@@ -68,13 +68,13 @@ The project follows a layered architecture:
 ### GET
 - `/ip-inventory/serviceId?serviceId=xxx`
 
-**Simple web UI**
-http://localhost:8080
-web/index.html
+- **Simple web UI**
+  - http://localhost:8080
+  - web/index.html
 
-**Full API specification**
-http://localhost:8080/swagger/
-swagger/openapi.yaml
+- **Full API specification**
+  - http://localhost:8080/swagger/
+  - swagger/openapi.yaml
 
 ## Technologies Used
 
@@ -144,11 +144,10 @@ ip-inventory-api/
 
 ## vcpkg (standalone) installation
 1. Download and install Git
-2. In PowerShell, check:
+2. In PowerShell, check(If empty - we need to proceed the installation):
 ```
 echo $env:VCPKG_ROOT
 ```
-If empty - we need to proceed the installation.
 3. In PowerShell:
 ```
 cd D:\
@@ -213,5 +212,5 @@ Clear separation between layers for maintainability
 
 ## Author
 
-    Nikola Vasilev
-    nicksona.in.lan@gmail.com
+   Nikola Vasilev
+   nicksona.in.lan@gmail.com
