@@ -127,7 +127,8 @@ swagger/openapi.yaml
 ├── web/
 │ └── index.html
 └── tests/
-  └── ValidationTests.cpp```
+  └── ValidationTests.cpp
+```
 
 
 ## Prerequisites
