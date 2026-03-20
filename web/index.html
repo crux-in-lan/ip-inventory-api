@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>IP Inventory Demo</title>
+</head>
+<body>
+  <h1>IP Inventory Demo</h1>
+  <button onclick="getServiceIps()">Get serviceId IPs</button>
+  <pre id="out"></pre>
+
+  <script>
+    async function getServiceIps() {
+      const serviceId = "xxxyyy";
+      const res = await fetch(`/ip-inventory/serviceId?serviceId=${encodeURIComponent(serviceId)}`);
+      const data = await res.json();
+      document.getElementById("out").textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# Build
+out/
+build/
+CMakeFiles/
+CMakeCache.txt
+
+# Visual Studio
+.vs/
+*.vcxproj*
+*.sln
+
+# Logs
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Task
+IP_inventory_task.pdf

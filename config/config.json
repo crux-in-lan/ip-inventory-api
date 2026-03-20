@@ -1,0 +1,40 @@
+{
+  "listeners": [
+    {
+      "address": "0.0.0.0",
+      "port": 8080,
+      "https": false
+    }
+  ],
+  "app": {
+    "number_of_threads": 1,
+    "document_root": "./",
+    "home_page": "./web/index.html",
+    "use_implicit_page": true,
+    "implicit_page": "index.html",
+    "file_types": [
+      "html",
+      "js",
+      "css",
+      "png",
+      "svg",
+      "json",
+      "yaml",
+      "yml",
+      "ico"
+    ],
+    "mime": {
+      "application/yaml": ["yaml", "yml"]
+    },
+    "locations": [
+      {
+        "uri_prefix": "/swagger",
+        "alias": "./swagger",
+        "is_case_sensitive": false,
+        "allow_all": true,
+        "is_recursive": true,
+        "filters": []
+      }
+    ]
+  }
+}
