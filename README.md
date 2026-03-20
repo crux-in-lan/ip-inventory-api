@@ -26,11 +26,11 @@ A Swagger (OpenAPI) definition, a simple web UI, a cleanup job that periodically
 
 The project follows a layered architecture:
 
-Controller (HTTP layer)
-↓
-Service (business logic)
-↓
-Database/Repository (PostgreSQL via libpqxx)
+    Controller (HTTP layer)
+    ↓
+    Service (business logic)
+    ↓
+    Database/Repository (PostgreSQL via libpqxx)
 
 ### Components
 
@@ -68,11 +68,11 @@ Database/Repository (PostgreSQL via libpqxx)
 ### GET
 - `/ip-inventory/serviceId?serviceId=xxx`
 
-Simple web UI:
+**Simple web UI**
 http://localhost:8080
 web/index.html
 
-Full API specification: 
+**Full API specification**
 http://localhost:8080/swagger/
 swagger/openapi.yaml
 
@@ -90,7 +90,8 @@ swagger/openapi.yaml
 
 
 ## Project Structure
-```ip-inventory-api/
+```
+ip-inventory-api/
 ├── CMakeLists.txt
 ├── vcpkg.json
 ├── CMakePresets.json
@@ -144,15 +145,21 @@ swagger/openapi.yaml
 ## vcpkg (standalone) installation
 1. Download and install Git
 2. In PowerShell, check:
+```
 echo $env:VCPKG_ROOT
+```
 If empty - we need to proceed the installation.
 3. In PowerShell:
+```
 cd D:\
 git clone https://github.com/microsoft/vcpkg.git
 cd .\vcpkg
 .\bootstrap-vcpkg.bat
-4. Then the set environment variable (PowerShell):
+```
+4. Then set the environment variable (PowerShell):
+```
 setx VCPKG_ROOT "D:\vcpkg"
+```
 
 
 ## Dependency Installation
@@ -206,5 +213,5 @@ Clear separation between layers for maintainability
 
 ## Author
 
-Nikola Vasilev
-nicksona.in.lan@gmail.com
+    Nikola Vasilev
+    nicksona.in.lan@gmail.com
