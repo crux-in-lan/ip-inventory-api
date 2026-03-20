@@ -6,12 +6,14 @@
 </head>
 <body>
   <h1>IP Inventory Demo</h1>
+  <input type="text" id="serviceID">
+  </br>
   <button onclick="getServiceIps()">Get serviceId IPs</button>
   <pre id="out"></pre>
 
   <script>
     async function getServiceIps() {
-      const serviceId = "xxxyyy";
+      var serviceId = document.getElementById("serviceID").value;
       const res = await fetch(`/ip-inventory/serviceId?serviceId=${encodeURIComponent(serviceId)}`);
       const data = await res.json();
       document.getElementById("out").textContent = JSON.stringify(data, null, 2);
