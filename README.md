@@ -150,14 +150,14 @@ echo $env:VCPKG_ROOT
 ```
 3. In PowerShell:
 ```
-cd D:\
+cd C:\
 git clone https://github.com/microsoft/vcpkg.git
 cd .\vcpkg
 .\bootstrap-vcpkg.bat
 ```
 4. Then set the environment variable (PowerShell):
 ```
-setx VCPKG_ROOT "D:\vcpkg"
+setx VCPKG_ROOT "C:\vcpkg"
 ```
 
 
@@ -179,22 +179,31 @@ Dependencies:
 2. Execute sql/001_schema.sql content (DDL) via any all-in-one solution for database development e.g. pgAdmin, Navicat etc.
 
 ## Build and Run Instructions (Windows)
-
-1. Open project in Visual Studio:
+1. Clone the Repository(PowerShell):
+```
+cd C:\
+git clone https://github.com/crux-in-lan/ip-inventory-api.git
+```
+2. Add builtin-baseline to vcpkg.json (we are using standalone vcpkg):
+```
+cd C:\ip-inventory-api
+& "$env:VCPKG_ROOT\vcpkg.exe" x-update-baseline --add-initial-baseline
+```
+3. Open project in Visual Studio:
 File → Open → Folder → ip-inventory-api
 
 ⚠️ Note:
 First build may take **20–40 minutes** because dependencies are compiled from source. Subsequent builds are fast.
 
-2. Ensure vcpkg is configured:
+4. Ensure vcpkg is configured:
 - `VCPKG_ROOT` environment variable is set
 - `CMakePresets.json` references vcpkg toolchain
 
-3. Build:
+5. Build:
 Ctrl + Shift + B
 
-4. Run: F5
-5. You can also run some unit tests from "Visual Studio -> Tests -> Run All Tests"
+6. Run: F5
+7. You can also run some unit tests from "Visual Studio -> Tests -> Run All Tests"
 
 ## Design Decisions
 
