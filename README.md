@@ -90,7 +90,7 @@ swagger/openapi.yaml
 
 
 ## Project Structure
-ip-inventory-api/
+```ip-inventory-api/
 ├── CMakeLists.txt
 ├── vcpkg.json
 ├── CMakePresets.json
@@ -127,7 +127,7 @@ ip-inventory-api/
 ├── web/
 │ └── index.html
 └── tests/
-  └── ValidationTests.cpp
+  └── ValidationTests.cpp```
 
 
 ## Prerequisites
@@ -199,9 +199,9 @@ Clear separation between layers for maintainability
 
 ## Future Improvements
 
-Add authentication/authorization (API key + JWT)
-Use connection pooling(when and if necessary)
-Add pagination for heavy queries(when and if necessary)
+1. Add authentication/authorization (API key + JWT)
+2. Use connection pooling(when and if necessary)
+3. Add pagination for heavy queries(when and if necessary)
 
 ## Author
 
