@@ -193,8 +193,8 @@ First build may take **20–40 minutes** because dependencies are compiled from 
 3. Build:
 Ctrl + Shift + B
 
-4. Run:
-F5
+4. Run: F5
+5. You can also run some unit tests from "Visual Studio -> Tests -> Run All Tests"
 
 ## Design Decisions
 
@@ -212,5 +212,5 @@ Clear separation between layers for maintainability
 
 ## Author
 
-   Nikola Vasilev
-   nicksona.in.lan@gmail.com
+Nikola Vasilev
+nicksona.in.lan@gmail.com
